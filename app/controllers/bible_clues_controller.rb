@@ -3,6 +3,8 @@ class BibleCluesController < ApplicationController
   def create
     bible_clue = BibleClue.new(bible_clue_params)
     if bible_clue.valid? && bible_clue.save
+      render status: 200
+    end
   end
 
   private
